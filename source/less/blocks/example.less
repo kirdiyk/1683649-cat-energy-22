@@ -1,4 +1,4 @@
-.example{
+.example {
   background-color: @grey;
 }
 
@@ -17,8 +17,14 @@
   padding-top: 17px;
 }
 
-.example__item{
+.example__item {
   margin-right: 40px;
+  width: 122px;
+  text-align: center;
+  padding: 13px 0 18px 0;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  position: relative;
 }
 
 .example__description {
@@ -29,6 +35,20 @@
   margin: 0;
   margin-bottom: 25px;
   padding-right: 1px;
+  //font-family: @arial;
+  //font-size: 12px;
+  //line-height: 12px;
+  //color: @black;
+  //margin: 0 auto;
+  display: block;
+  text-align: center;
+  min-width: 80px;
+  position: absolute;
+  bottom: -15px;
+  transform: translateX(-50%);
+  left: 50%;
+  background-color: @grey;
+  //padding: 0 9px;
 }
 
 .example__list {
@@ -143,31 +163,121 @@
   margin: 0;
 }
 
-.example__item {
-  width: 122px;
-  text-align: center;
-  padding: 13px 0 18px 0;
-  border: 1px solid #cdcdcd;
-  border-radius: 5px;
-  position: relative;
+.example__illustration {
+  width: 100%;
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+  &--before {
+    background-image: url("../img/before-mobile@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
+  }
+
+  &--after {
+    background-image: url("../img/after-mobile@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
+  }
 }
 
-.example__description {
-  font-family: @arial;
-  font-size: 12px;
-  line-height: 12px;
-  color: @black;
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-  min-width: 80px;
-  position: absolute;
-  bottom: -15px;
-  transform: translateX(-50%);
-  left: 50%;
-  background-color: @grey;
-  padding: 0 9px;
+.example__progress {
+  padding-bottom: 3px;
+  overflow: hidden;
+
+  .example__image-wrapper {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  .example__progress-toggle {
+    transform: translateX(0);
+    transition: 0.5s;
+  }
+
+  &--after {
+    .example__image-wrapper {
+      transform: translateX(-50%);
+      transition: 0.5s ease-out;
+    }
+
+    .example__progress-toggle {
+      transform: translateX(100%);
+      transition: 0.5s ease-out;
+    }
+  }
 }
+
+.example__buttons-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 219px;
+  margin: 15px auto 0;
+}
+
+.example__progress-button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 60px;
+  // padding: 10px;
+  cursor: pointer;
+}
+
+.example__progress-bar {
+  width: 84px;
+  height: 14px;
+  padding: 3px 5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.example__progress-toggle {
+  width: 50%;
+  height: 6px;
+  border-radius: 10px;
+  //background-color: $firmcolor;
+}
+
+.example__range {
+  display: none;
+}
+
+// .example__item {
+//   width: 122px;
+//   text-align: center;
+//   padding: 13px 0 18px 0;
+//   border: 1px solid #cdcdcd;
+//   border-radius: 5px;
+//   position: relative;
+// }
+
+// .example__description {
+//   font-family: @arial;
+//   font-size: 12px;
+//   line-height: 12px;
+//   color: @black;
+//   margin: 0 auto;
+//   display: block;
+//   text-align: center;
+//   min-width: 80px;
+//   position: absolute;
+//   bottom: -15px;
+//   transform: translateX(-50%);
+//   left: 50%;
+//   background-color: @grey;
+//   padding: 0 9px;
+// }
 
 @media (min-width: @tablet-width) {
   .example-item {
@@ -186,6 +296,121 @@
     bottom: -8px;
     background-color: #ffffff;
   }
+
+  .example__illustration {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &--before {
+      z-index: 20;
+      background-image: url("../img/before-tablet@1x.png");
+      background-position-x: -25px;
+      background-position-y: 4px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png");
+      }
+    }
+
+    &--after {
+      direction: rtl;
+      left: auto;
+      right: 0;
+      z-index: 10;
+      background-image: url("../img/after-tablet@1x.png");
+      background-position-x: -11px;
+      transform: scaleX(-1);
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png");
+      }
+    }
+  }
+
+  .example__buttons-block {
+    width: 570px;
+    margin: 13px auto 0;
+  }
+
+  .example__progress-bar {
+    width: 427px;
+    height: 35px;
+    border: none;
+    background-color: transparent;
+    transform: translate(4px, 11px);
+  }
+
+  .example__progress-toggle {
+    display: none;
+  }
+
+  .example__range {
+    display: block;
+    width: 100%;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background-color: #dcdcdc;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .example__progress-toggle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -17px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #cecece;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 #d6d6d6;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      //background-color: $firmcolor;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 5px 5px 0 #d6d6d6;
+    }
+
+    &:active {
+      border-color: @green;
+    }
+  }
+
+  .example__progress-button {
+    font-size: 20px;
+    line-height: 20px;
+    width: auto;
+    padding: 7px 0;
+    border-bottom: 1px dotted #bebebe;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -198,4 +423,3 @@
     background-color: @grey;
   }
 }
-
