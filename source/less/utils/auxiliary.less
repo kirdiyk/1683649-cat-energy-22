@@ -6,3 +6,21 @@ body {
 a {
   text-decoration: none;
 }
+
+iframe {
+  width: 320px;
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  iframe {
+    width: 768px;
+    height: 400px;
+  }
+}  
+
+@media (min-width: @desktop-width) {
+  iframe {
+    width: @desktop-width;
+  }
+}  

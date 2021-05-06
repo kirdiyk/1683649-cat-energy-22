@@ -71,8 +71,8 @@
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
               <a class="program-item__link" href="#">
-                каталог slim
-                <img src="img/icon_arrow.svg" alt="Стрелка">
+                <span class="program-item-link__text">каталог slim</span>
+                <img class="program-item-link__img" src="img/icon_arrow.svg" alt="Стрелка">
               </a>
             </li>
             <li class="program-item">
@@ -82,8 +82,8 @@
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
               <a class="program-item__link" href="#">
-                каталог pro
-                <img src="img/icon_arrow.svg" alt="Стрелка">
+                <span class="program-item-link__text">каталог pro </span>
+                <img class="program-item-link__img" src="img/icon_arrow.svg" alt="Стрелка">
               </a>
             </li>
           </ul>
@@ -127,55 +127,70 @@
             <p class="example__text">
               Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-            <dl class="example__list">
-              <div class="example__item">
-                <dt class="example__number">5 КГ</dt>
-                  <dd class="example__description">снижение веса</dd>
-              </div>
-              <div class="example__item">
-                <dt class="example__number">60 дней</dt>
-                  <dd class="example__description">затрачено времени</dd>
-              </div>
-            </dl>
+            <div class="example__price-wrapper">
+              <ul class="example__list">
+                <li class="example__item example-item">
+                  <p class="example__number">5 КГ</p>
+                  <p class="example__description">снижение веса</p>
+                </li>
+                <li class="example__item example-item">
+                  <p class="example__number">60 дней</p>
+                  <p class="example__description">затрачено времени</p>
+                </li>
+              </ul>
+              <p class="example__price">Затраты на питание: <span class="example__sum">15 000 руб.</span></p>
+            </div>
           </div>
-        </div>
-        <div class="example__sum example__sum-wrapper">
-          <span class="example__sum">Затраты на питание: </span>
-          <span class="example__sum">15 000 руб.</span>
-          <div class="example__progress">
+          <div class="example__desktop-column-wrapper">
             <div class="example__image-wrapper">
-              <div class="example__illustration example__illustration--before"></div>
-              <div class="example__illustration example__illustration--after"></div>
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/example-desktop@1x.webp 1x, img/example-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/example-tablet@1x.webp 1x, img/example-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/example-mobile@1x.webp 1x, img/example-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/example-desktop@1x.png 1x, img/example-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/example-tablet@1x.png 1x, img/example-tablet@2x.png 2x">
+                <img class="example__image example__image--example" src="img/example-mobile@1x.png" srcset="img/example-mobile@2x.png 2x" alt="cat example">
+              </picture>
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example__image example__image--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x"  alt="cat after">
+              </picture>
             </div>
-
-            <div class="example__buttons-block">
-              <button class="example__progress-button example__progress-button--before" type="button">Было</button>
-              <div class="example__progress-bar">
-                <input type="range" min="1" max="100" value="50" class="example__range">
-                <div class="example__progress-toggle"></div>
-              </div>
-              <button class="example__progress-button example__progress-button--after" type="button">Стало</button>
+            <ul class="example__buttons-block">
+              <li class="example__button">
+                <button class="example__progress-button example__progress-button--before" type="button">Было</button>
+              </li>
+              <li class="example__button">
+                <div class="example__scale">
+                  <span class="example__bar"></span>
+                </div>
+              </li>
+              <li class="example__button">
+                <button class="example__progress-button example__progress-button--after" type="button">Стало</button>
+              </li>
+              <!-- <div class="example__progress-bar">
+              <input type="range" min="1" max="100" value="50" class="example__range">
+              <div class="example__progress-toggle"></div>
             </div>
+            <button class="example__progress-button example__progress-button--after" type="button">Стало</button> -->
+            </ul>
           </div>
-          <!-- TO DO before after -->
         </div>
       </section>
     </main>
-    <!-- <div class="page-footer__contacts contacts contacts--index">
-      <div class="contacts__header container">
-        <b class="contacts__title">приглашаем <br>к сотрудничеству<br> дилеров!</b>
-        <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
-      </div>
-      <div class="contacts__map"></div>
-    </div> -->
     <footer class="page-footer">
-      <div class="page-footer__wrapper container">
-        <div class="page-footer__contacts contacts contacts--index">
-          <div class="contacts__header container">
+      <div class="container">
+        <div class="contacts contacts--index container">
+          <div class="contacts__header">
             <b class="contacts__title">приглашаем <br>к сотрудничеству<br> дилеров!</b>
-            <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+            <p class="contacts__text">ул. Большая<br> Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
           </div>
-          <div class="contacts__map"></div>
+          <!-- <div class="contacts__map"></div> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625305667!2d30.320853351583388!3d59.9387191689653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1620151018032!5m2!1sru!2sru"  height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
         <div class="page-footer__wrapper container">
           <a href="index.html" class="page-footer__logo page-footer__logo--link">
@@ -218,7 +233,7 @@
       </div>  
     </footer>
     <script src="js/menu.js"></script>
-    <script src="js/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIpU6slqsCsOCtCrFEgKbzsbM88FSwmuU&callback=initMap&language=ru" async defer></script>
+    <!-- <script src="js/map.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIpU6slqsCsOCtCrFEgKbzsbM88FSwmuU&callback=initMap&language=ru" async defer></script> -->
   </body>
 </html>
