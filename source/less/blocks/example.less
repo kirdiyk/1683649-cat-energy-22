@@ -27,23 +27,48 @@
   padding-right: 1px;
 }
 
-.example__image {
-  left: -19px;
-  top: -3px;
-  position: relative;
-  margin-top: 37px;
-  margin-bottom: 25px;
-  width: 320px;
-  height: 240px;
+// .example__slider {
+//   display: flex;
+//   justify-content: center;
+//   margin: 0;
+//   margin-bottom: 32px;
+//   height: 240px;
+// }
 
-  &--after {
-    display: none;
-  }
+.example__slider-images {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 32px;
+  height: 240px;
+}
+
+.example__image {
+  // left: -19px;
+  // top: -3px;
+  // position: relative;
+  // margin-top: 37px;
+  // margin-bottom: 25px;
+  // width: 320px;
+  // height: 240px;
+
+  // &--after {
+  //   display: none;
+  // }
+  width: auto;
+  height: 100%;
 }
 
 .example__image-wrapper {
-  width: 280px;
-  overflow: hidden;
+  // width: 280px;
+  //width: 50%;
+  //overflow: hidden;
+  display: none;
+  transition: 0.2s ease-out;
+
+  &--active {
+    display: block;
+  }
 }
 
 .example-item {
@@ -198,19 +223,55 @@
     margin-right: 40px;
   }
 
+  // .slider {
+  //   max-width: 570px;
+  //   margin: 0 auto;
+  // }
+
+  .example__slider-images {
+    width: auto;
+    height: 521px;
+    margin-bottom: 16px;
+    justify-content: space-between;
+  }
+
   .example__image {
-    width: 690px;
-    height: auto;
-    margin: 0 auto;
-    left: 18px;
-    top: 3px;
-    margin-top: 53px;
-    margin-bottom: 20px;
+    // width: 690px;
+    // height: auto;
+    // margin: 0 auto;
+    // left: 18px;
+    // top: 3px;
+    // margin-top: 53px;
+    // margin-bottom: 20px;
+    position: absolute;
+
+    &--before {
+      left: -25px;
+      top: -1px;
+    }
+
+    &--after {
+      right: -69px;
+    }
+  }
+
+  .example__image--before {
+    width: 50%;
+    overflow: hidden;
   }
 
   .example__image-wrapper {
-    width: 690px;
-    overflow: hidden;
+    // width: 690px;
+    //overflow: hidden;
+    //width: 50%;
+    //overflow: hidden;
+    display: block;
+    position: relative;
+
+    &--before {
+      width: calc(50% + 30px);
+      margin-left: -30px;
+    }
   }
 
   .example__price {
@@ -227,6 +288,7 @@
     width: 570px;
     justify-content: space-between;
     align-items: center;
+    margin-top: 550px;
   }
 
   .example__progress-button {
@@ -338,16 +400,34 @@
   }
 
   .example__image {
-    margin: 0;
+  //   margin: 0;
     left: -41px;
     margin-bottom: 39px;
   }
 
-  .example__image-wrapper {
-    width: 610px;
-    height: 517px;
-    overflow: hidden;
-    margin-bottom: 43px;
+  // .example__image-wrapper {
+    // width: 610px;
+    // height: 517px;
+    // overflow: hidden;
+    // margin-bottom: 43px;
+  // }
+
+  .example__slider {
+    margin: 0;
+    margin-bottom: 37px;
+  }
+
+  .example__image-wrapper--before {
+    width: calc(50% + 40px);
+    margin-left: -40px;
+  }
+
+  .example__image--before {
+    left: -42px;
+  }
+
+  .example__image--after {
+    right: -42px;
   }
 
   .example__price-wrapper {

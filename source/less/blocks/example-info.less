@@ -1,0 +1,139 @@
+.example-info {
+  margin-bottom: 34px;
+}
+
+.example-info__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 34px;
+  // flex-wrap: wrap;
+  max-width: 320px;
+}
+
+.example-info__item {
+  width: 124px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+  padding: 13px 18px 15px;
+  margin: 0;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.example-info__number {
+  font-family: @oswald-regular;
+  font-size: 24px;
+  line-height: 24px;
+  color: @black;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 1;
+}
+
+.example-info__description {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: @black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 8px;
+  padding: 0 10px;
+  display: inline-block;
+  width: calc(100% - 38px);
+  transform: translateY(100%);
+  background-color: @grey;
+}
+
+.example-info__price {
+  font-family: @oswald-regular;
+  font-size: 14px;
+  line-height: 20px;
+  color: @black;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .example-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .example-info__price-wrapper {
+    margin: 0;
+    margin-bottom: 5px;
+    //width: 366px;
+    max-width: inherit;
+  }
+
+  .example-info__item {
+    width: 162px;
+    padding: 14px 25px 19px;
+  }
+
+  .example-info__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example-info__description {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: @white;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: fit-content;
+  }
+
+  .example-info__price {
+    width: 200px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    margin-bottom: 7px;
+  }
+
+  .example-info__number {
+    margin-top: 9px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example-info {
+    display: block;
+    margin-bottom: 75px;
+  }
+
+  .example-info__price-wrapper {
+    margin-bottom: 51px;
+    flex-wrap: nowrap;
+  }
+
+  .example-info__description {
+    background-color: @grey;
+  }
+
+  .example-info__price {
+    width: auto;
+    text-align: left;
+  }
+
+  .example-info__sum {
+    margin-left: 60px;
+  }
+}
