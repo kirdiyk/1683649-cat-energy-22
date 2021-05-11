@@ -3,13 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page-index">
     <div class="container">
       <header class="page-header">
-        <a class="page-header__logo" href="index.html">
+        <a class="page-header__logo">
           <picture>
             <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -68,9 +70,8 @@
               <p class="program-item__description">
                 Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
               </p>
-              <a class="program-item__link program-item-link" href="#">
+              <a class="program-item__link program-item-link" href="catalog.html">
                 <span class="program-item-link__text">каталог slim</span>
-                <img class="program-item-link__img" src="img/icon_arrow.svg" alt="Стрелка">
               </a>
             </li>
             <li class="program-item">
@@ -78,9 +79,8 @@
               <p class="program-item__description program-item__description--thick">
                 Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="program-item__link program-item-link" href="#">
+              <a class="program-item__link program-item-link" href="catalog.html">
                 <span class="program-item-link__text">каталог pro </span>
-                <img class="program-item-link__img" src="img/icon_arrow.svg" alt="Стрелка">
               </a>
             </li>
           </ul>
@@ -217,8 +217,8 @@
             </ul>
           </div>
           <div class="page-footer__copyright copyright">
-            <a class="copyright__link" href="http://htmlacademy.ru">HTML Academy</a>
-            <a class="copyright__link-logo" href="http://htmlacademy.ru" aria-label="Переход на сайт в HTML Academy">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на сайт в HTML Academy">
               <svg class="copyright__logo" width="60" height="80">
                 <use xlink:href="img/icons/sprite.svg#logo-academy"></use>
               </svg>
